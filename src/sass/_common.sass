@@ -199,7 +199,7 @@ $gray: #d9d9d9
 .answer
 	position: relative
 	&__title
-		padding: 58px 28px 55px 46px
+		padding: 58px 28px 30px 46px
 		position: relative
 		color: #333
 		font-family: Ubuntu
@@ -218,6 +218,14 @@ $gray: #d9d9d9
 			left: 5px
 			+r(650)
 				font-size: 22px
+	&__sev
+		font-family: Ubuntu, sans-serif
+		font-size: 18px
+		font-weight: 500
+		line-height: 1
+		color: $gray
+		text-align: center
+		margin-bottom: 32px
 //items
 .items
 	position: relative
@@ -234,6 +242,14 @@ $gray: #d9d9d9
 		+tr(background-color 0.3s)
 		margin: 0 1% 40px
 		text-align: center
+		.item__checked
+			+s(checked)
+			display: none
+			z-index: 100
+			position: absolute
+			left: 16px
+			top: 14px
+
 		+r(700)
 			min-height: 175px
 		+r(650)
@@ -251,7 +267,10 @@ $gray: #d9d9d9
 			left: 15%
 			left: 62px
 			+tr(all 0.3s)
-		&:hover, &:focus
+		&.active
+			.item__checked
+				display: block
+		&.active, &:hover, &:focus
 			background-color: $blue
 			.item__text
 				color: white
