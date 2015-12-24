@@ -31,8 +31,6 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; }
 
-h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 1; }
-
 .inner { max-width: 800px; padding: 0 20px; margin: 0 auto; }
 
 .btn { height: 46px; line-height: 46px; color: white; font-family: "Ubuntu", sans-serif; font-size: 22px; font-weight: 500; text-align: center; position: relative; cursor: pointer; }
@@ -41,11 +39,13 @@ h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-
 .btn:active { top: 1px; }
 .btn-quiz { width: 156px; }
 .btn-quiz:active { top: inner; }
-.btn-quiz:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: 0px -64px; z-index: 1; top: 0; bottom: 0; margin: auto; left: 16px; position: absolute; }
+.btn-quiz:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: -36px -64px; z-index: 1; top: 0; bottom: 0; margin: auto; left: 16px; position: absolute; }
 .btn.is-red { background-color: #e1272c; }
 .btn.is-red:active { background-color: #CE2025; }
 
 .header { height: 0; padding-bottom: 50%; width: 100%; background: url(../img/header.jpg) no-repeat center; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-align: center; position: relative; }
+.header.header_sm { padding-bottom: 7.8125%; }
+.header.header_sm .header__top { position: absolute; left: 0; right: 0; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); padding: 0; }
 .header .inner { top: 0; bottom: 0; left: 0; right: 0; position: absolute; max-width: none; }
 .header__top { position: relative; max-width: 470px; overflow: hidden; margin: auto; font-family: "Ubuntu", sans-serif; font-size: 18px; font-weight: 400; line-height: 1; color: #fff; padding-top: 33px; }
 .header__top span { position: relative; display: inline-block; padding: 0 38px; text-transform: uppercase; }
@@ -56,18 +56,60 @@ h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-
 .header .btn-quiz { position: absolute; bottom: -23px; left: 0; right: 0; margin: auto; z-index: 200; }
 .header .btn-quiz:active { top: auto; }
 
-.footer { position: relative; background-color: #FFF; }
-.footer .inner { padding-top: 84px; padding-bottom: 50px; }
-.footer p { color: #333; font-size: 18px; font-weight: 300; line-height: 30px; line-height: 1.4; font-family: "Ubuntu", sans-serif; }
-.footer .social { font-size: 0; text-align: center; }
-.footer .social a { -webkit-transition: all 0.4s; transition: all 0.4s; width: 60px; height: 60px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #d9d9d9; display: inline-block; position: relative; color: #fff; font-size: 35px; margin: 50px 14px 0; }
-.footer .social a:hover:first-child { background-color: #3D5B99; }
-.footer .social a:hover:last-child { background-color: #1B95E0; }
-.footer .social a i { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; z-index: 10; }
+.main { position: relative; background-color: #FFF; }
+.main.main_no-pad .inner { padding-top: 0; padding-bottom: 0; }
+.main .inner { padding-top: 84px; padding-bottom: 50px; }
+
+.answer { position: relative; }
+.answer__title { padding: 58px 28px 55px 46px; position: relative; color: #333; font-family: Ubuntu; font-size: 32px; font-weight: 400; line-height: 44px; }
+.answer__title .count { color: #d9d9d9; font-size: 32px; font-family: Ubuntu, sans-serif; font-weight: 400; position: absolute; left: 5px; }
+
+.items { position: relative; font-size: 0; }
+.items__wrap { margin: 0 -1px; }
+.items .item { background-color: #d9d9d9; width: 48%; min-height: 140px; position: relative; display: inline-block; vertical-align: top; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; margin: 0 1% 40px; text-align: center; }
+.items .item:after { content: ""; display: block; width: 0; height: 0; border-top: 28px solid transparent; border-right: 28px solid transparent; position: absolute; bottom: -28px; left: 15%; left: 62px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.items .item:hover, .items .item:focus { background-color: #0089c5; }
+.items .item:hover .item__text, .items .item:focus .item__text { color: white; }
+.items .item:hover:after, .items .item:focus:after { border-top-color: #0089c5; }
+.items .item__text { margin: auto; color: #333; font-family: Ubuntu; font-size: 22px; font-weight: 400; line-height: 32px; padding: 38px 40px; }
+
+h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 1; }
+
+a { text-decoration: none; -webkit-transition: all 0.4s; transition: all 0.4s; }
+
+p { color: #333; font-size: 18px; font-weight: 300; line-height: 30px; font-family: "Ubuntu", sans-serif; }
+
+.social { font-size: 0; text-align: center; }
+.social a { -webkit-transition: all 0.4s; transition: all 0.4s; width: 60px; height: 60px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #d9d9d9; display: inline-block; position: relative; color: #fff; font-size: 35px; margin: 50px 14px 0; }
+.social a:hover:first-child { background-color: #3D5B99; }
+.social a:hover:last-child { background-color: #1B95E0; }
+.social a i { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; z-index: 10; }
+
+.arrows { display: block; }
+.arrows .arrow { display: inline-block; position: absolute; top: 0; bottom: 0; margin: auto; }
+.arrows .arrow:hover { -webkit-transform: scale(1.4); -ms-transform: scale(1.4); transform: scale(1.4); }
+.arrows .arrow-left { left: 35px; background-image: url("../img/icons.png"); width: 14px; height: 26px; background-position: 0px -64px; }
+.arrows .arrow-right { right: 35px; background-image: url("../img/icons.png"); width: 14px; height: 26px; background-position: -18px -64px; }
+
+.progress { position: relative; height: 7px; background-color: #d9d9d9; }
+.progress__line { position: absolute; top: 0; bottom: 0; left: 0; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+@media only screen and (max-width: 1024px){
+ .header.header_sm{ padding-bottom: 80px; } }
 @media only screen and (max-width: 800px){
  .header__title{ font-size: 33px; } }
+@media only screen and (max-width: 700px){
+ .header__top span{ padding: 0 20px; }
+ .header__top span:before, .header__top span:after{ width: 75%; }
+ .header__top span:before{ left: -75%; }
+ .header__top span:after{ right: -75%; }
+ .items .item{ min-height: 175px; } }
+@media only screen and (max-width: 650px){
+ .answer__title{ font-size: 22px; padding-left: 28px; }
+ .answer__title .count{ font-size: 22px; }
+ .items .item{ width: 100%; min-height: 140px; }
+ .items .item__text{ font-size: 19px; } }
 @media only screen and (max-width: 500px){
  .header__top{ padding-top: 20px; font-size: 16px; }
  .header__title{ font-size: 27px; }

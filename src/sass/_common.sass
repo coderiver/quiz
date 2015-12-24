@@ -32,12 +32,7 @@ body
 	font-family: Ubuntu, Arial, sans-serif
 	font-size: 16px
 	line-height: 1
-h1
-	color: white
-	font-family: Ubuntu
-	font-size: 40px
-	font-weight: 400
-	line-height: 1
+
 // common blocks
 
 //vars
@@ -48,6 +43,7 @@ $magenta: #b30077
 $orange: #ff9900
 $yellow: #f4d200
 $violet: #85609d
+$gray: #d9d9d9
 
 //inner
 %inner
@@ -102,6 +98,17 @@ $violet: #85609d
 	+cover
 	text-align: center
 	position: relative
+	&.header_sm
+		padding-bottom: 7.8125%
+		.header__top
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			padding: 0
+		+r(1024)
+			padding-bottom: 80px
 	.inner
 		top: 0
 		bottom: 0
@@ -128,6 +135,8 @@ $violet: #85609d
 			display: inline-block
 			padding: 0 38px
 			text-transform: uppercase
+			+r(700)
+				padding: 0 20px
 			&:before, &:after
 				content: ''
 				display: block
@@ -140,10 +149,16 @@ $violet: #85609d
 				background-color: #fff
 				opacity: 0.3
 				z-index: 100
+				+r(700)
+					width: 75%
 			&:before
 				left: -152%
+				+r(700)
+					left: -75%
 			&:after
 				right: -152%
+				+r(700)
+					right: -75%
 	&__title
 		position: absolute
 		top: 50%
@@ -169,45 +184,87 @@ $violet: #85609d
 			font-size: 19px
 		&:active
 			top: auto
-//footer
-.footer
-	// min-height: 388px
+//main
+.main
 	position: relative
 	background-color: #FFF
+	&.main_no-pad
+		.inner
+			padding-top: 0
+			padding-bottom: 0
 	.inner
 		padding-top: 84px
 		padding-bottom: 50px
-	p
+//answer
+.answer
+	position: relative
+	&__title
+		padding: 58px 28px 55px 46px
+		position: relative
 		color: #333
-		font-size: 18px
-		font-weight: 300
-		line-height: 30px
-		line-height: 1.4
-		font-family: "Ubuntu", sans-serif
-	.social
-		font-size: 0
+		font-family: Ubuntu
+		font-size: 32px
+		font-weight: 400
+		line-height: 44px
+		+r(650)
+			font-size: 22px
+			padding-left: 28px
+		.count
+			color: $gray
+			font-size: 32px
+			font-family: Ubuntu, sans-serif
+			font-weight: 400
+			position: absolute
+			left: 5px
+			+r(650)
+				font-size: 22px
+//items
+.items
+	position: relative
+	font-size: 0
+	&__wrap
+		margin: 0 -1px
+	.item 
+		background-color: $gray
+		width: 48%
+		min-height: 140px
+		position: relative
+		display: inline-block
+		vertical-align: top
+		+tr(background-color 0.3s)
+		margin: 0 1% 40px
 		text-align: center
-		a
-			+tr(all 0.4s)
-			width: 60px
-			height: 60px
-			border-radius: 50%
-			background-color: #d9d9d9
-			display: inline-block
-			position: relative
-			color: #fff
-			font-size: 35px
-			margin: 50px 14px 0
-			&:hover:first-child
-				background-color: #3D5B99
-			&:hover:last-child
-				background-color: #1B95E0
-
-			i 
-				position: absolute
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
-				display: block
-				z-index: 10
-
+		+r(700)
+			min-height: 175px
+		+r(650)
+			width: 100%
+			min-height: 140px
+		&:after
+			content: ''
+			display: block
+			width: 0
+			height: 0
+			border-top: 28px solid transparent
+			border-right: 28px solid transparent
+			position: absolute
+			bottom: -28px
+			left: 15%
+			left: 62px
+			+tr(all 0.3s)
+		&:hover, &:focus
+			background-color: $blue
+			.item__text
+				color: white
+			&:after
+				border-top-color: $blue
+		&__text
+			// max-width: 255px
+			margin: auto
+			color: #333
+			font-family: Ubuntu
+			font-size: 22px
+			font-weight: 400
+			line-height: 32px
+			padding: 38px 40px
+			+r(650)
+				font-size: 19px
