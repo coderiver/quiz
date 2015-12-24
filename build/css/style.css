@@ -37,6 +37,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 
 .btn:hover { opacity: 0.9; -webkit-transition: all 0.4s; transition: all 0.4s; }
 .btn:active { top: 1px; }
+.btn-next { width: 156px; }
+.btn-next:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: -30px -64px; z-index: 1; top: 0; bottom: 0; right: 0; left: 0; margin: auto; position: absolute; }
 .btn-quiz { width: 156px; }
 .btn-quiz:active { top: inner; }
 .btn-quiz:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: -30px -64px; z-index: 1; top: 0; bottom: 0; margin: auto; left: 16px; position: absolute; }
@@ -60,7 +62,7 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .main.main_no-pad .inner { padding-top: 0; padding-bottom: 0; }
 .main .inner { padding-top: 84px; padding-bottom: 50px; }
 
-.answer { position: relative; }
+.answer { position: relative; text-align: center; }
 .answer__title { padding: 58px 28px 30px 46px; position: relative; color: #333; font-family: Ubuntu; font-size: 32px; font-weight: 400; line-height: 44px; }
 .answer__title .count { color: #d9d9d9; font-size: 32px; font-family: Ubuntu, sans-serif; font-weight: 400; position: absolute; left: 5px; }
 .answer__sev { font-family: Ubuntu, sans-serif; font-size: 18px; font-weight: 500; line-height: 1; color: #d9d9d9; text-align: center; margin-bottom: 32px; }
