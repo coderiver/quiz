@@ -49,7 +49,7 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .header.header_sm { padding-bottom: 7.8125%; }
 .header.header_sm .header__top { position: absolute; left: 0; right: 0; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); padding: 0; }
 .header .inner { top: 0; bottom: 0; left: 0; right: 0; position: absolute; max-width: none; }
-.header__top { position: relative; max-width: 470px; overflow: hidden; margin: auto; font-family: "Ubuntu", sans-serif; font-size: 18px; font-weight: 400; line-height: 1; color: #fff; padding-top: 33px; }
+.header__top { position: relative; overflow: hidden; margin: auto; font-family: "Ubuntu", sans-serif; font-size: 18px; font-weight: 400; line-height: 1; color: #fff; padding-top: 33px; }
 .header__top span { position: relative; display: inline-block; padding: 0 38px; text-transform: uppercase; }
 .header__top span:before, .header__top span:after { content: ""; display: block; position: absolute; top: 0; bottom: 0; margin: auto; width: 152%; height: 1px; background-color: #fff; opacity: 0.3; z-index: 100; }
 .header__top span:before { left: -152%; }
@@ -68,6 +68,16 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .answer__sev { font-family: Ubuntu, sans-serif; font-size: 18px; font-weight: 500; line-height: 1; color: #d9d9d9; text-align: center; margin-bottom: 32px; }
 
 .items { position: relative; font-size: 0; }
+.items.items_pic .item, .items.items_pic .item.active { background-color: transparent; }
+.items.items_pic .item:after, .items.items_pic .item.active:after { display: none; }
+.items.items_pic .item:hover, .items.items_pic .item.active:hover { background-color: transparent; }
+.items.items_pic .item:nth-child(1):before { background-color: rgba(0, 137, 197, 0.7); }
+.items.items_pic .item:nth-child(2):before { background-color: rgba(93, 161, 77, 0.7); }
+.items.items_pic .item:nth-child(3):before { background-color: rgba(179, 0, 119, 0.7); }
+.items.items_pic .item:nth-child(4):before { background-color: rgba(255, 153, 0, 0.7); }
+.items.items_pic .item:before { content: ""; display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 100; opacity: 0; }
+.items.items_pic .item:hover:before { opacity: 1; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+.items.items_pic .item > img { height: 100%; width: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
 .items__wrap { margin: 0 -1px; }
 .items .item { background-color: #d9d9d9; width: 48%; min-height: 140px; position: relative; display: inline-block; vertical-align: top; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; margin: 0 1% 40px; text-align: center; }
 .items .item .item__checked { background-image: url("../img/icons.png"); width: 26px; height: 20px; background-position: 0px -64px; display: none; z-index: 100; position: absolute; left: 16px; top: 14px; }
@@ -83,6 +93,8 @@ h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-
 a { text-decoration: none; -webkit-transition: all 0.4s; transition: all 0.4s; }
 
 p { color: #333; font-size: 18px; font-weight: 300; line-height: 30px; font-family: "Ubuntu", sans-serif; }
+
+img { max-width: 100%; height: auto; }
 
 .social { font-size: 0; text-align: center; }
 .social a { -webkit-transition: all 0.4s; transition: all 0.4s; width: 60px; height: 60px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #d9d9d9; display: inline-block; position: relative; color: #fff; font-size: 35px; margin: 50px 14px 0; }
@@ -109,16 +121,25 @@ p { color: #333; font-size: 18px; font-weight: 300; line-height: 30px; font-fami
  .header__top span:before, .header__top span:after{ width: 75%; }
  .header__top span:before{ left: -75%; }
  .header__top span:after{ right: -75%; }
+ .items.items_pic .item{ min-height: 190px; width: 80%; }
  .items .item{ min-height: 175px; } }
 @media only screen and (max-width: 650px){
  .answer__title{ font-size: 22px; padding-left: 28px; }
  .answer__title .count{ font-size: 22px; }
+ .items.items_pic .item{ width: 90%; }
  .items .item{ width: 100%; min-height: 140px; }
  .items .item__text{ font-size: 19px; } }
+@media only screen and (max-width: 550px){
+ .items.items_pic .item{ width: 100%; } }
 @media only screen and (max-width: 500px){
  .header__top{ padding-top: 20px; font-size: 16px; }
  .header__title{ font-size: 27px; }
- .header .btn-quiz{ height: 40px; line-height: 40px; font-size: 19px; } }
+ .header .btn-quiz{ height: 40px; line-height: 40px; font-size: 19px; }
+ .items.items_pic .item{ width: 80%; min-height: 140px; } }
+@media only screen and (max-width: 450px){
+ .items.items_pic .item{ min-height: 100px; } }
+@media only screen and (max-width: 350px){
+ .items.items_pic .item{ width: 100%; } }
 
 
 
