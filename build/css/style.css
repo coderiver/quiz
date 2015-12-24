@@ -29,10 +29,49 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-skrill:before { content: ""; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; }
 
+h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 1; }
+
+.inner { max-width: 800px; padding: 0 20px; margin: 0 auto; }
+
+.btn { height: 46px; line-height: 46px; color: white; font-family: "Ubuntu", sans-serif; font-size: 22px; font-weight: 500; text-align: center; position: relative; cursor: pointer; }
+
+.btn:hover { opacity: 0.9; -webkit-transition: all 0.4s; transition: all 0.4s; }
+.btn:active { top: 1px; }
+.btn-quiz { width: 156px; }
+.btn-quiz:active { top: inner; }
+.btn-quiz:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: 0px -64px; z-index: 1; top: 0; bottom: 0; margin: auto; left: 16px; position: absolute; }
+.btn.is-red { background-color: #e1272c; }
+.btn.is-red:active { background-color: #CE2025; }
+
+.header { height: 0; padding-bottom: 50%; width: 100%; background: url(../img/header.jpg) no-repeat center; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-align: center; position: relative; }
+.header .inner { top: 0; bottom: 0; left: 0; right: 0; position: absolute; max-width: none; }
+.header__top { position: relative; max-width: 470px; overflow: hidden; margin: auto; font-family: "Ubuntu", sans-serif; font-size: 18px; font-weight: 400; line-height: 1; color: #fff; padding-top: 33px; }
+.header__top span { position: relative; display: inline-block; padding: 0 38px; text-transform: uppercase; }
+.header__top span:before, .header__top span:after { content: ""; display: block; position: absolute; top: 0; bottom: 0; margin: auto; width: 152%; height: 1px; background-color: #fff; opacity: 0.3; z-index: 100; }
+.header__top span:before { left: -152%; }
+.header__top span:after { right: -152%; }
+.header__title { position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width: 100%; padding: 0 20px; }
+.header .btn-quiz { position: absolute; bottom: -23px; left: 0; right: 0; margin: auto; z-index: 200; }
+.header .btn-quiz:active { top: auto; }
+
+.footer { position: relative; background-color: #FFF; }
+.footer .inner { padding-top: 84px; padding-bottom: 50px; }
+.footer p { color: #333; font-size: 18px; font-weight: 300; line-height: 30px; line-height: 1.4; font-family: "Ubuntu", sans-serif; }
+.footer .social { font-size: 0; text-align: center; }
+.footer .social a { -webkit-transition: all 0.4s; transition: all 0.4s; width: 60px; height: 60px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #d9d9d9; display: inline-block; position: relative; color: #fff; font-size: 35px; margin: 50px 14px 0; }
+.footer .social a:hover:first-child { background-color: #3D5B99; }
+.footer .social a:hover:last-child { background-color: #1B95E0; }
+.footer .social a i { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; z-index: 10; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+@media only screen and (max-width: 800px){
+ .header__title{ font-size: 33px; } }
+@media only screen and (max-width: 500px){
+ .header__top{ padding-top: 20px; font-size: 16px; }
+ .header__title{ font-size: 27px; }
+ .header .btn-quiz{ height: 40px; line-height: 40px; font-size: 19px; } }
 
 
 
