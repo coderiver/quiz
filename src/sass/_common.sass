@@ -246,13 +246,11 @@ $gray: #d9d9d9
 	position: relative
 	font-size: 0
 	&.items_pic
-		.item, .item.active
-			background-color: transparent
+		.item
 			&:after
 				display: none
 			&:hover
-				background-color: transparent
-		.item
+				background-color: $gray
 			&:nth-child(1):before
 				background-color: rgba(0, 137, 197, 0.7)
 			&:nth-child(2):before
@@ -271,10 +269,13 @@ $gray: #d9d9d9
 				left: 0
 				z-index: 100
 				opacity: 0
-			&:hover
+			&:hover, &.active
 				&:before
 					opacity: 1
 					+tr(opacity 0.3s )
+			&.active
+				.item__checked
+					display: block
 			> img 
 				height: 100%
 				width: 100%
