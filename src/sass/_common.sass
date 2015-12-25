@@ -85,18 +85,23 @@ $gray: #d9d9d9
 			position: absolute
 	&-quiz
 		width: 156px
+		padding-left: 17px
 		&:active
 			top: inner
-		&:before
-			content: ''
-			display: block
-			+s(ar)
-			z-index: 1
-			top: 0
-			bottom: 0
-			margin: auto
-			left: 16px
-			position: absolute
+	&-again
+		width: 164px
+		background-color: #999
+		padding-left: 17px
+	&-again:before, &-quiz:before
+		content: ''
+		display: block
+		+s(ar)
+		z-index: 1
+		top: 0
+		bottom: 0
+		margin: auto
+		left: 16px
+		position: absolute
 	&.is-red
 		background-color: $red
 		&:active
