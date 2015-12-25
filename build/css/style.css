@@ -37,14 +37,14 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 
 .btn:hover { opacity: 0.9; -webkit-transition: all 0.4s; transition: all 0.4s; }
 .btn:active { top: 1px; }
-.btn-next { width: 156px; }
-.btn-next:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: -30px -64px; z-index: 1; top: 0; bottom: 0; right: 0; left: 0; margin: auto; position: absolute; }
-.btn-quiz { width: 156px; padding-left: 17px; }
-.btn-quiz:active { top: inner; }
-.btn-again { width: 164px; background-color: #999; padding-left: 17px; }
-.btn-again:before, .btn-quiz:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: -30px -64px; z-index: 1; top: 0; bottom: 0; margin: auto; left: 16px; position: absolute; }
-.btn.is-red { background-color: #e1272c; }
-.btn.is-red:active { background-color: #CE2025; }
+.btn_next { width: 156px; }
+.btn_next:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: -30px -64px; z-index: 1; top: 0; bottom: 0; right: 0; left: 0; margin: auto; position: absolute; }
+.btn_quiz { width: 156px; padding-left: 17px; }
+.btn_quiz:active { top: inner; }
+.btn_again { width: 164px; background-color: #999; padding-left: 17px; }
+.btn_again:before, .btn_quiz:before { content: ""; display: block; background-image: url("../img/icons.png"); width: 10px; height: 15px; background-position: -30px -64px; z-index: 1; top: 0; bottom: 0; margin: auto; left: 16px; position: absolute; }
+.btn.btn_red { background-color: #e1272c; }
+.btn.btn_red:active { background-color: #CE2025; }
 
 .header { height: 0; padding-bottom: 50%; width: 100%; background: url(../img/header.jpg) no-repeat center; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-align: center; position: relative; }
 .header.header_sm { padding-bottom: 7.8125%; }
@@ -58,8 +58,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .header__top span:before { left: -152%; }
 .header__top span:after { right: -152%; }
 .header__title { position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width: 100%; padding: 0 20px; }
-.header .btn-quiz { position: absolute; bottom: -23px; left: 0; right: 0; margin: auto; z-index: 200; }
-.header .btn-quiz:active { top: auto; }
+.header .btn_quiz { position: absolute; bottom: -23px; left: 0; right: 0; margin: auto; z-index: 200; }
+.header .btn_quiz:active { top: auto; }
 
 .main { position: relative; background-color: #FFF; }
 .main.main_no-pad .inner { padding-top: 0; padding-bottom: 0; }
@@ -69,7 +69,7 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .answer__title { padding: 58px 28px 30px 46px; position: relative; color: #333; font-family: Ubuntu; font-size: 32px; font-weight: 400; line-height: 44px; }
 .answer__title .count { color: #d9d9d9; font-size: 32px; font-family: Ubuntu, sans-serif; font-weight: 400; position: absolute; left: 5px; }
 .answer__sev { font-family: Ubuntu, sans-serif; font-size: 18px; font-weight: 500; line-height: 1; color: #d9d9d9; text-align: center; margin-bottom: 32px; }
-.answer .btn-next { margin-bottom: 40px; }
+.answer .btn_next { margin-bottom: 40px; }
 
 .items { position: relative; font-size: 0; }
 .items.items_pic .item:after { display: none; }
@@ -97,13 +97,10 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .finish__title { color: #e1272c; font-family: Ubuntu, sans-serif; font-size: 36px; font-weight: 400; line-height: 1; margin-bottom: 55px; }
 .finish__text { text-align: left; }
 
-h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 1; }
-
-a { text-decoration: none; -webkit-transition: all 0.4s; transition: all 0.4s; }
-
-p { color: #333; font-size: 18px; font-weight: 300; line-height: 30px; font-family: "Ubuntu", sans-serif; }
-
-img { max-width: 100%; height: auto; }
+.quiz h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 1; }
+.quiz a { text-decoration: none; -webkit-transition: all 0.4s; transition: all 0.4s; }
+.quiz p { color: #333; font-size: 18px; font-weight: 300; line-height: 30px; font-family: "Ubuntu", sans-serif; }
+.quiz img { max-width: 100%; height: auto; }
 
 .social { font-size: 0; text-align: center; }
 .social a { -webkit-transition: all 0.4s; transition: all 0.4s; width: 60px; height: 60px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #d9d9d9; display: inline-block; position: relative; color: #fff; font-size: 35px; margin: 50px 14px 0; }
@@ -160,7 +157,7 @@ img { max-width: 100%; height: auto; }
 @media only screen and (max-width: 500px){
  .header__top{ padding-top: 20px; font-size: 16px; }
  .header__title{ font-size: 27px; }
- .header .btn-quiz{ height: 40px; line-height: 40px; font-size: 19px; }
+ .header .btn_quiz{ height: 40px; line-height: 40px; font-size: 19px; }
  .items.items_pic .item{ width: 80%; min-height: 140px; } }
 @media only screen and (max-width: 450px){
  .items.items_pic .item{ min-height: 100px; } }
