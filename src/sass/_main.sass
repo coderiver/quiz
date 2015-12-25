@@ -43,6 +43,54 @@ img
 			transform: translate(-50%, -50%)
 			display: block
 			z-index: 10
+//social-btn
+.social-btn
+	max-width: 552px
+	position: relative
+	margin: 51px auto 30px
+
+	&__wrp
+		margin: 0 -4px
+		font-size: 0
+	&__col
+		display: inline-block
+		vertical-align: top
+		width: 272px
+		margin: 0 4px
+		+r(600)
+			display: block
+			margin: auto
+		+r(350)
+			width: 260px
+	a 
+		height: 46px
+		line-height: 44px
+		position: relative
+		display: block
+		margin-bottom: 10px
+		&:hover
+			opacity: 0.8
+		&:active
+			top: 1px
+		span
+			display: inline-block
+			vertical-align: middle
+			font: 300 18px/1 "Ubuntu", sans-serif
+			color: #fff
+		i 
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 31px
+			margin: auto
+			z-index: 100
+			font-size: 25px
+			color: white
+	&__fb
+		background-color: #3b5998
+	&__tw
+		background-color: #1dadeb
+
 //arrows
 .arrows
 	display: block

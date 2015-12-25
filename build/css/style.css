@@ -48,6 +48,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .header { height: 0; padding-bottom: 50%; width: 100%; background: url(../img/header.jpg) no-repeat center; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-align: center; position: relative; }
 .header.header_sm { padding-bottom: 7.8125%; }
 .header.header_sm .header__top { position: absolute; left: 0; right: 0; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); padding: 0; }
+.header.header_sm .header__pic { width: 226px; height: 226px; background-color: white; -webkit-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 73px rgba(0, 0, 0, 0.25); box-shadow: 0 0 73px rgba(0, 0, 0, 0.25); overflow: hidden; position: absolute; left: 0; right: 0; top: 47.5%; margin: auto; z-index: 300; }
+.header.header_sm .header__pic img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
 .header .inner { top: 0; bottom: 0; left: 0; right: 0; position: absolute; max-width: none; }
 .header__top { position: relative; overflow: hidden; margin: auto; font-family: "Ubuntu", sans-serif; font-size: 18px; font-weight: 400; line-height: 1; color: #fff; padding-top: 33px; }
 .header__top span { position: relative; display: inline-block; padding: 0 38px; text-transform: uppercase; }
@@ -89,6 +91,11 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .items .item.active:after, .items .item:hover:after { border-top-color: #0089c5; }
 .items .item__text { margin: auto; color: #333; font-family: Ubuntu; font-size: 22px; font-weight: 400; line-height: 32px; padding: 38px 40px; }
 
+.finish { position: relative; text-align: center; }
+.finish .inner { padding-top: 195px; padding-bottom: 100px; }
+.finish__title { color: #e1272c; font-family: Ubuntu, sans-serif; font-size: 36px; font-weight: 400; line-height: 1; margin-bottom: 55px; }
+.finish__text { text-align: left; }
+
 h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 1; }
 
 a { text-decoration: none; -webkit-transition: all 0.4s; transition: all 0.4s; }
@@ -103,6 +110,17 @@ img { max-width: 100%; height: auto; }
 .social a:hover:last-child { background-color: #1B95E0; }
 .social a i { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; z-index: 10; }
 
+.social-btn { max-width: 552px; position: relative; margin: 51px auto 30px; }
+.social-btn__wrp { margin: 0 -4px; font-size: 0; }
+.social-btn__col { display: inline-block; vertical-align: top; width: 272px; margin: 0 4px; }
+.social-btn a { height: 46px; line-height: 44px; position: relative; display: block; margin-bottom: 10px; }
+.social-btn a:hover { opacity: 0.8; }
+.social-btn a:active { top: 1px; }
+.social-btn a span { display: inline-block; vertical-align: middle; font: 300 18px/1 "Ubuntu", sans-serif; color: #fff; }
+.social-btn a i { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); left: 31px; margin: auto; z-index: 100; font-size: 25px; color: white; }
+.social-btn__fb { background-color: #3b5998; }
+.social-btn__tw { background-color: #1dadeb; }
+
 .arrows { display: block; }
 .arrows .arrow { display: inline-block; position: absolute; top: 0; bottom: 0; margin: auto; }
 .arrows .arrow:hover { -webkit-transform: scale(1.4); -ms-transform: scale(1.4); transform: scale(1.4); }
@@ -114,9 +132,12 @@ img { max-width: 100%; height: auto; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1024px){
- .header.header_sm{ padding-bottom: 80px; } }
+ .header.header_sm{ padding-bottom: 80px; }
+ .header.header_sm .header__pic{ top: 38px; } }
 @media only screen and (max-width: 800px){
  .header__title{ font-size: 33px; } }
+@media only screen and (max-width: 750px){
+ .header.header_sm .header__pic{ width: 175px; height: 175px; } }
 @media only screen and (max-width: 700px){
  .header__top span{ padding: 0 20px; }
  .header__top span:before, .header__top span:after{ width: 75%; }
@@ -130,6 +151,9 @@ img { max-width: 100%; height: auto; }
  .items.items_pic .item{ width: 90%; }
  .items .item{ width: 100%; min-height: 140px; }
  .items .item__text{ font-size: 19px; } }
+@media only screen and (max-width: 600px){
+ .finish__title{ font-size: 32px; margin-bottom: 30px; }
+ .social-btn__col{ display: block; margin: auto; } }
 @media only screen and (max-width: 550px){
  .items.items_pic .item{ width: 100%; } }
 @media only screen and (max-width: 500px){
@@ -139,8 +163,11 @@ img { max-width: 100%; height: auto; }
  .items.items_pic .item{ width: 80%; min-height: 140px; } }
 @media only screen and (max-width: 450px){
  .items.items_pic .item{ min-height: 100px; } }
+@media only screen and (max-width: 400px){
+ .finish__title{ font-size: 28px; } }
 @media only screen and (max-width: 350px){
- .items.items_pic .item{ width: 100%; } }
+ .items.items_pic .item{ width: 100%; }
+ .social-btn__col{ width: 260px; } }
 
 
 
