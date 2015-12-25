@@ -295,11 +295,11 @@ $gray: #d9d9d9
 				left: 0
 				z-index: 100
 				opacity: 0
-			&:hover, &.active
+			&:hover, &.is-active
 				&:before
 					opacity: 1
 					+tr(opacity 0.3s )
-			&.active
+			&.is-active
 				.item__checked
 					display: block
 			> img 
@@ -362,10 +362,10 @@ $gray: #d9d9d9
 			left: 15%
 			left: 62px
 			+tr(all 0.3s)
-		&.active
+		&.is-active
 			.item__checked
 				display: block
-		&.active, &:hover
+		&.is-active, &:hover
 			background-color: $blue
 			.item__text
 				color: white
