@@ -105,15 +105,18 @@ $gray: #d9d9d9
 
 //header
 .header
-	height: 0
-	padding-bottom: 50%
+	min-height: 50vh
 	width: 100%
 	background: url(../img/header.jpg) no-repeat center
 	+cover
 	text-align: center
 	position: relative
+	+rh(450)
+		min-height: 350px
 	&.header_sm
 		padding-bottom: 7.8125%
+		min-height: inherit
+		height: 0
 		.header__top
 			position: absolute
 			left: 0
@@ -271,20 +274,26 @@ $gray: #d9d9d9
 .items
 	position: relative
 	font-size: 0
-	&.items_pic
-		.item
+	&__wrap
+		margin: 0 -1%
+	.item 
+		background-color: $gray
+		width: 48%
+		min-height: 140px
+		position: relative
+		display: inline-block
+		vertical-align: top
+		+tr(background-color 0.3s)
+		margin: 0 1% 40px
+		text-align: center
+		&.item_pic
+			+r(760)
+				width: 48%
+				min-height: 140px
+			+r(500)
+				width: 98%
 			&:after
 				display: none
-			&:hover
-				background-color: $gray
-			&:nth-child(1):before
-				background-color: rgba(0, 137, 197, 0.7)
-			&:nth-child(2):before
-				background-color: rgba(93, 161, 77, 0.7)
-			&:nth-child(3):before
-				background-color: rgba(179, 0, 119, 0.7)
-			&:nth-child(4):before
-				background-color: rgba(255, 153, 0, 0.7)
 			&:before
 				content: ''
 				display: block
@@ -302,42 +311,26 @@ $gray: #d9d9d9
 			&.is-active
 				.item__checked
 					display: block
-			> img 
-				height: 100%
-				width: 100%
-				position: absolute
-				top: 0
-				bottom: 0
-				left: 0
-				right: 0
-				margin: auto
-			+r(700)
-				min-height: 190px
-				width: 80%
-			+r(650)
-				width: 90%
-			+r(550)
-				width: 100%
-			+r(500)
-				width: 80%
-				min-height: 140px
-			+r(450)
-				min-height: 100px
-			+r(350)
-				width: 100%
-
-	&__wrap
-		margin: 0 -1px
-	.item 
-		background-color: $gray
-		width: 48%
-		min-height: 140px
-		position: relative
-		display: inline-block
-		vertical-align: top
-		+tr(background-color 0.3s)
-		margin: 0 1% 40px
-		text-align: center
+			&:nth-child(1)
+				background: url(../img/img1.jpg) no-repeat center
+				+cover
+				&:before
+					background-color: rgba(0, 137, 197, 0.7)
+			&:nth-child(2)
+				background: url(../img/img2.jpg) no-repeat center
+				+cover
+				&:before
+					background-color: rgba(93, 161, 77, 0.7)
+			&:nth-child(3)
+				background: url(../img/img3.jpg) no-repeat center
+				+cover
+				&:before
+					background-color: rgba(179, 0, 119, 0.7)
+			&:nth-child(4)
+				background: url(../img/img4.jpg) no-repeat center
+				+cover
+				&:before
+					background-color: rgba(255, 153, 0, 0.7)
 		.item__checked
 			+s(checked)
 			display: none
@@ -359,7 +352,6 @@ $gray: #d9d9d9
 			border-right: 28px solid transparent
 			position: absolute
 			bottom: -28px
-			left: 15%
 			left: 62px
 			+tr(all 0.3s)
 		&.is-active
