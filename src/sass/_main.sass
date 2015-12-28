@@ -98,17 +98,20 @@
 	.arrow
 		display: inline-block
 		position: absolute
-		top: 0
-		bottom: 0
+		top: 50%
+		transform: translateY(-50%)
 		margin: auto
-		&:hover
-			+scale(1.4)
+		color: white
+		font-size: 26px
+		// &:hover
+		// 	+scale(1.4)
 		&-left
 			left: 35px
-			+s(arr-left)
+			// +s(arr-left)
 		&-right
 			right: 35px
-			+s(arr-right)
+			// +s(arr-right)
+
 //progress
 .progress
 	position: relative
