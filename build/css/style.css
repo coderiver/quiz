@@ -143,6 +143,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
  .items .item.item_pic{ width: 48%; min-height: 140px; } }
 @media only screen and (max-width: 750px){
  .header.header_sm .header__pic{ width: 175px; height: 175px; }
+ .items .item{ margin-bottom: 20px; }
+ .items .item:after{ display: none; }
  .finish .inner{ padding-top: 160px; }
  .finish__title{ margin-bottom: 30px; } }
 @media only screen and (max-width: 700px){
@@ -154,6 +156,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 @media only screen and (max-width: 650px){
  .answer__title{ font-size: 22px; padding-left: 28px; padding-bottom: 30px; }
  .answer__title .count{ font-size: 22px; }
+ .items__wrap{ margin: 0; }
+ .items .item{ margin: 0 0 20px; }
  .items .item{ width: 100%; min-height: 140px; }
  .items .item__text{ font-size: 19px; } }
 @media only screen and (max-width: 600px){

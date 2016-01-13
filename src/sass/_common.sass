@@ -287,6 +287,8 @@ $gray: #d9d9d9
 	font-size: 0
 	&__wrap
 		margin: 0 -1%
+		+r(650)
+			margin: 0
 	.item 
 		background-color: $gray
 		width: 48%
@@ -297,6 +299,10 @@ $gray: #d9d9d9
 		+tr(background-color 0.3s)
 		margin: 0 1% 40px
 		text-align: center
+		+r(750)
+			margin-bottom: 20px
+		+r(650)
+			margin: 0 0 20px
 		&.item_pic
 			+r(760)
 				width: 48%
@@ -366,6 +372,8 @@ $gray: #d9d9d9
 			bottom: -28px
 			left: 62px
 			+tr(all 0.3s)
+			+r(750)
+				display: none
 		&.is-active
 			.item__checked
 				display: block
