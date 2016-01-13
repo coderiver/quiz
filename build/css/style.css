@@ -43,7 +43,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .btn_next i { font-size: 15px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: auto; z-index: 10; }
 .btn_quiz { width: 156px; padding-left: 17px; }
 .btn_quiz:active { top: inner; }
-.btn_again { width: 164px; background-color: #999; padding-left: 17px; }
+.btn_again { width: 164px; background-color: rgba(153, 153, 153, 0.7); padding-left: 17px; }
+.btn_quiz:hover, .btn_again:hover { background-color: #e1272c; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .btn_quiz i, .btn_again i { font-size: 15px; position: absolute; top: 50%; left: 13px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); margin: auto; z-index: 10; }
 .btn.btn_red { background-color: #e1272c; }
 .btn.btn_red:active { background-color: #CE2025; }
@@ -51,7 +52,7 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .header { min-height: 50vh; width: 100%; background: url(../img/header.jpg) no-repeat center; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-align: center; position: relative; }
 .header.header_sm { padding-bottom: 7.8125%; min-height: inherit; height: 0; }
 .header.header_sm .header__top { position: absolute; left: 0; right: 0; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); padding: 0; }
-.header.header_sm .header__pic { width: 226px; height: 226px; background-color: white; -webkit-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 73px rgba(0, 0, 0, 0.25); box-shadow: 0 0 73px rgba(0, 0, 0, 0.25); overflow: hidden; position: absolute; left: 0; right: 0; top: 47.5%; margin: auto; z-index: 300; }
+.header.header_sm .header__pic { width: 226px; height: 226px; background-color: white; -webkit-border-radius: 50%; border-radius: 50%; overflow: hidden; position: absolute; left: 0; right: 0; top: 44.7%; margin: auto; z-index: 300; }
 .header.header_sm .header__pic img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
 .header .inner { top: 0; bottom: 0; left: 0; right: 0; position: absolute; max-width: none; }
 .header__top { position: relative; overflow: hidden; margin: auto; font-family: "Ubuntu", sans-serif; font-size: 18px; font-weight: 400; line-height: 1; color: #fff; padding-top: 33px; }
@@ -97,8 +98,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .items .item__text { margin: auto; color: #333; font-family: Ubuntu; font-size: 22px; font-weight: 400; line-height: 32px; padding: 38px 40px; }
 
 .finish { position: relative; text-align: center; }
-.finish .inner { padding-top: 195px; padding-bottom: 100px; }
-.finish__title { color: #e1272c; font-family: Ubuntu, sans-serif; font-size: 36px; font-weight: 400; line-height: 1; margin-bottom: 55px; }
+.finish .inner { padding-top: 205px; padding-bottom: 100px; }
+.finish__title { color: #e1272c; font-family: Ubuntu, sans-serif; font-size: 36px; font-weight: 400; line-height: 130%; margin-bottom: 55px; }
 .finish__text { text-align: left; }
 
 .quiz h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 130%; letter-spacing: -0.5px; }
@@ -119,7 +120,7 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .social-btn a { height: 46px; line-height: 44px; position: relative; display: block; margin-bottom: 10px; }
 .social-btn a:hover { opacity: 0.8; }
 .social-btn a:active { top: 1px; }
-.social-btn a span { display: inline-block; vertical-align: middle; font: 300 18px/1 "Ubuntu", sans-serif; color: #fff; }
+.social-btn a span { display: inline-block; vertical-align: middle; font: 300 18px/1 "Ubuntu", sans-serif; color: #fff; margin-left: 18px; }
 .social-btn a i { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); left: 31px; margin: auto; z-index: 100; font-size: 25px; color: white; }
 .social-btn__fb { background-color: #3b5998; }
 .social-btn__tw { background-color: #1dadeb; }
@@ -141,7 +142,9 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 @media only screen and (max-width: 760px){
  .items .item.item_pic{ width: 48%; min-height: 140px; } }
 @media only screen and (max-width: 750px){
- .header.header_sm .header__pic{ width: 175px; height: 175px; } }
+ .header.header_sm .header__pic{ width: 175px; height: 175px; }
+ .finish .inner{ padding-top: 160px; }
+ .finish__title{ margin-bottom: 30px; } }
 @media only screen and (max-width: 700px){
  .header__top span{ padding: 0 20px; }
  .header__top span:before, .header__top span:after{ width: 75%; }
