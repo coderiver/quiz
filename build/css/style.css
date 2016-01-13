@@ -68,7 +68,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .main .inner { padding-top: 84px; padding-bottom: 50px; }
 
 .answer { position: relative; text-align: center; }
-.answer__title { padding: 58px 28px 30px 46px; position: relative; color: #333; font-family: Ubuntu; font-size: 32px; font-weight: 400; line-height: 44px; }
+.answer.answer_single .answer__title { padding-bottom: 56px; }
+.answer__title { padding: 58px 28px 30px 46px; position: relative; color: #333; font-family: Ubuntu; font-size: 32px; font-weight: 400; line-height: 44px; text-align: left; }
 .answer__title .count { color: #d9d9d9; font-size: 32px; font-family: Ubuntu, sans-serif; font-weight: 400; position: absolute; left: 5px; }
 .answer__sev { font-family: Ubuntu, sans-serif; font-size: 18px; font-weight: 500; line-height: 1; color: #d9d9d9; text-align: center; margin-bottom: 32px; }
 .answer .btn_next { margin-bottom: 40px; }
@@ -101,7 +102,7 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .finish__title { color: #e1272c; font-family: Ubuntu, sans-serif; font-size: 36px; font-weight: 400; line-height: 1; margin-bottom: 55px; }
 .finish__text { text-align: left; }
 
-.quiz h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 1; }
+.quiz h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 130%; letter-spacing: -0.5px; }
 .quiz a { text-decoration: none; -webkit-transition: all 0.4s; transition: all 0.4s; }
 .quiz p { color: #333; font-size: 18px; font-weight: 300; line-height: 30px; font-family: "Ubuntu", sans-serif; }
 .quiz img { max-width: 100%; height: auto; }
@@ -110,7 +111,8 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .social a { -webkit-transition: all 0.4s; transition: all 0.4s; width: 60px; height: 60px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #d9d9d9; display: inline-block; position: relative; color: #fff; font-size: 35px; margin: 50px 14px 0; }
 .social a:hover:first-child { background-color: #3b5998; }
 .social a:hover:last-child { background-color: #1dadeb; }
-.social a i { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; z-index: 10; }
+.social a i { position: absolute; top: 50%; top: 52%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; z-index: 10; }
+.social a i.fa-twitter { left: 52%; }
 
 .social-btn { max-width: 552px; position: relative; margin: 51px auto 30px; }
 .social-btn__wrp { margin: 0 -4px; font-size: 0; }
