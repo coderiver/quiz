@@ -95,7 +95,7 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .items .item.is-active, .items .item:hover { background-color: #0089c5; }
 .items .item.is-active .item__text, .items .item:hover .item__text { color: white; }
 .items .item.is-active:after, .items .item:hover:after { border-top-color: #0089c5; }
-.items .item__text { max-width: 255px; margin: auto; color: #333; font-family: Ubuntu; font-size: 22px; font-weight: 400; line-height: 32px; padding: 38px 40px; text-align: center; }
+.items .item__text { margin: auto; color: #333; font-family: Ubuntu; font-size: 22px; font-weight: 400; line-height: 32px; padding: 38px 40px; text-align: center; }
 .items .item__text .is-left { text-align: left; }
 
 .finish { position: relative; text-align: center; }
