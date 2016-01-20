@@ -69,9 +69,10 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .main .inner { padding-top: 84px; padding-bottom: 50px; }
 
 .answer { position: relative; text-align: center; }
-.answer__title { padding: 58px 28px 56px 46px; position: relative; color: #333; font-family: Ubuntu; font-size: 32px; font-weight: 400; line-height: 44px; text-align: left; }
+.answer__title { padding: 58px 28px 30px 46px; position: relative; color: #333; font-family: Ubuntu; font-size: 32px; font-weight: 400; line-height: 44px; text-align: left; }
+.answer__title.answer__title_mod { padding-bottom: 57px; }
 .answer__title .count { color: #d9d9d9; font-size: 32px; font-family: Ubuntu, sans-serif; font-weight: 400; position: absolute; left: 5px; }
-.answer__sev { font-family: Ubuntu, sans-serif; font-size: 18px; font-weight: 500; line-height: 1; color: #d9d9d9; text-align: center; margin-bottom: 32px; position: absolute; bottom: 25px; left: 0; right: 0; margin: auto; }
+.answer__sev { font-family: Ubuntu, sans-serif; font-size: 18px; font-weight: 500; line-height: 1; color: #d9d9d9; text-align: center; margin: 0 auto 36px; }
 .answer .btn_next { margin-bottom: 40px; }
 
 .items { position: relative; font-size: 0; }
