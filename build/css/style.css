@@ -96,12 +96,11 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
 .items .item.is-active, .items .item:hover { background-color: #0089c5; }
 .items .item.is-active .item__text, .items .item:hover .item__text { color: white; }
 .items .item.is-active:after, .items .item:hover:after { border-top-color: #0089c5; }
-.items .item__text { margin: auto; color: #333; font-family: Ubuntu; font-size: 22px; font-weight: 400; line-height: 32px; padding: 38px 40px; text-align: center; }
-.items .item__text .is-left { text-align: left; }
+.items .item__text { margin: auto; color: #333; font-family: Ubuntu; font-size: 22px; font-weight: 400; line-height: 32px; padding: 38px 40px; text-align: left; }
 
 .finish { position: relative; text-align: center; }
-.finish .inner { padding-top: 205px; padding-bottom: 100px; }
-.finish__title { color: #e1272c; font-family: Ubuntu, sans-serif; font-size: 36px; font-weight: 400; line-height: 130%; margin-bottom: 55px; }
+.finish .inner { padding-top: 193px; padding-bottom: 100px; }
+.finish__title { color: #e1272c; font-family: Ubuntu, sans-serif; font-size: 36px; font-weight: 400; line-height: 130%; margin-bottom: 48px; }
 .finish__text { text-align: left; }
 
 .quiz h1 { color: white; font-family: Ubuntu; font-size: 40px; font-weight: 400; line-height: 130%; letter-spacing: -0.5px; }
@@ -156,20 +155,24 @@ body { font-family: Ubuntu, Arial, sans-serif; font-size: 16px; line-height: 1; 
  .header__top span:after{ right: -75%; }
  .items .item{ min-height: 175px; } }
 @media only screen and (max-width: 650px){
+ .answer__title.answer__title_mod{ padding-bottom: 30px; }
  .answer__title{ font-size: 22px; padding-left: 28px; padding-bottom: 30px; }
  .answer__title .count{ font-size: 22px; }
  .items__wrap{ margin: 0; }
  .items .item{ margin-bottom: 20px; }
  .items .item__text{ font-size: 19px; } }
 @media only screen and (max-width: 600px){
- .finish__title{ font-size: 32px; margin-bottom: 30px; }
+ .finish__title{ font-size: 32px; margin-bottom: 20px; }
  .social-btn__col{ display: block; margin: auto; } }
+@media only screen and (max-width: 515px){
+ .items .item__text{ min-height: 204px; } }
 @media only screen and (max-width: 500px){
  .header__top{ padding-top: 20px; font-size: 16px; }
  .header__title{ font-size: 27px; }
  .header .btn_quiz{ height: 40px; line-height: 40px; font-size: 19px; }
  .items .item.item_pic{ width: 98%; }
- .items .item{ width: 100%; min-height: 140px; margin-left: 0; margin-right: 0; } }
+ .items .item{ width: 100%; min-height: 140px; margin-left: 0; margin-right: 0; }
+ .items .item__text{ min-height: auto; } }
 @media only screen and (max-height: 450px){
  .header{ min-height: 350px; } }
 @media only screen and (max-width: 400px){
