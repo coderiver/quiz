@@ -93,6 +93,7 @@ $gray: #d9d9d9
 		&:hover
 			background-color: $red
 			+tr(all 0.3s)
+			opacity: 1
 		i
 			font-size: 15px
 			position: absolute
@@ -298,11 +299,54 @@ $gray: #d9d9d9
 		+tr(background-color 0.3s)
 		margin: 0 1% 40px
 		text-align: center
+		&:after
+			content: ''
+			display: block
+			width: 0
+			height: 0
+			border-top: 28px solid transparent
+			border-right: 28px solid transparent
+			position: absolute
+			bottom: -28px
+			left: 62px
+			+tr(all 0.3s)
+			+r(750)
+				display: none
 		+r(750)
 			margin-bottom: 20px
-		+r(650)
-			// margin: 0 0 20px
-			margin-bottom: 20px
+		+r(700)
+			min-height: 175px
+		+r(500)
+			width: 100%
+			min-height: 140px
+			margin-left: 0
+			margin-right: 0
+		&.is-blue
+			&:hover, &.is-active
+				background-color: rgba(0, 137, 197, 0.7)
+				&:after
+					border-top-color: rgba(0, 137, 197, 0.7)
+		&.is-green
+			&:hover, &.is-active
+				background-color: rgba(93, 161, 77, 0.7)
+				&:after
+					border-top-color: rgba(93, 161, 77, 0.7)
+		&.is-magenta
+			&:hover, &.is-active
+				background-color: rgba(179, 0, 119, 0.7)
+				&:after
+					border-top-color: rgba(179, 0, 119, 0.7)
+		&.is-orange
+			&:hover, &.is-active
+				background-color: rgba(255, 153, 0, 0.7)
+				&:after
+					border-top-color: rgba(255, 153, 0, 0.7)
+		&.is-active, &.is-answered
+			.item__checked
+				display: block
+		&.is-active, &:hover
+			.item__text
+				color: white
 		&.item_pic
 			+r(760)
 				width: 48%
@@ -325,29 +369,30 @@ $gray: #d9d9d9
 				&:before
 					opacity: 1
 					+tr(opacity 0.3s )
-			&.is-answered
-				.item__checked
-					display: block
 			&:nth-child(1)
 				background: url(../img/img1.jpg) no-repeat center
 				+cover
-				&:before
-					background-color: rgba(0, 137, 197, 0.7)
 			&:nth-child(2)
 				background: url(../img/img2.jpg) no-repeat center
 				+cover
-				&:before
-					background-color: rgba(93, 161, 77, 0.7)
 			&:nth-child(3)
 				background: url(../img/img3.jpg) no-repeat center
 				+cover
-				&:before
-					background-color: rgba(179, 0, 119, 0.7)
 			&:nth-child(4)
 				background: url(../img/img4.jpg) no-repeat center
 				+cover
-				&:before
-					background-color: rgba(255, 153, 0, 0.7)
+		&.item_pic-blue
+			&:before
+				background-color: rgba(0, 137, 197, 0.7)
+		&.item_pic-green
+			&:before
+				background-color: rgba(93, 161, 77, 0.7)
+		&.item_pic-magenta
+			&:before
+				background-color: rgba(179, 0, 119, 0.7)
+		&.item_pic-orange
+			&:before
+				background-color: rgba(255, 153, 0, 0.7)
 		.item__checked
 			font-size: 20px
 			color: white
@@ -356,35 +401,6 @@ $gray: #d9d9d9
 			position: absolute
 			left: 16px
 			top: 14px
-		+r(700)
-			min-height: 175px
-		+r(500)
-			width: 100%
-			min-height: 140px
-			margin-left: 0
-			margin-right: 0
-		&:after
-			content: ''
-			display: block
-			width: 0
-			height: 0
-			border-top: 28px solid transparent
-			border-right: 28px solid transparent
-			position: absolute
-			bottom: -28px
-			left: 62px
-			+tr(all 0.3s)
-			+r(750)
-				display: none
-		&.is-active
-			.item__checked
-				display: block
-		&.is-active, &:hover
-			background-color: $blue
-			.item__text
-				color: white
-			&:after
-				border-top-color: $blue
 		&__text
 			margin: auto
 			color: #333
